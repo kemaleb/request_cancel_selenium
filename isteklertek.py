@@ -1,22 +1,22 @@
  # -*- coding: utf-8 -*-
-
+ # This code for version of Instagram July 2020 // Bu kod bloğu Instagram Temmuz 2020 sürümü için geçerlidir.
 
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
 
-browser = webdriver.Chrome()
+browser = webdriver.Chrome() # if you use another browser driver you can change here. // Başka bir tarayıcı kullanıyorsanız buradan değiştirebilirsiniz.
 
     
 browser.get("https://www.instagram.com/")
 time.sleep(2)
 girisid = browser.find_element_by_xpath("""//*[@id="react-root"]/section/main/article/div[2]/div[1]/div/form/div[2]/div/label/input""")
-girisid.send_keys("--Buraya Kullanıcı Adınızı Giriniz--")
+girisid.send_keys("--Enter ID Here--")# Buraya kullanıcı adınızı girin.
 time.sleep(1)
     
     
 sifre = browser.find_element_by_xpath("""//*[@id="react-root"]/section/main/article/div[2]/div[1]/div/form/div[3]/div/label/input""")
-sifre.send_keys("--Buraya Şifre Giriniz--")
+sifre.send_keys("--Enter Password Here--")# Buraya Şifre Giriniz.
 time.sleep(1)
 sifre.send_keys(Keys.ENTER)
     
@@ -51,7 +51,7 @@ while i < 250:
         
         i += 1  
     except:
-        print("Silme işlemi tamamlandı")
+        print("Deleting has been finished")
         i += 250
         browser.close()    
 #
