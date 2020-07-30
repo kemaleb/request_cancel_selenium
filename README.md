@@ -1,4 +1,4 @@
-# request_cancel_selenium
+# Cancel instagram requests with Python Selenium 
 Canceling Instagram follow requests with Python Selenium
 
 
